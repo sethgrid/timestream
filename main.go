@@ -77,7 +77,7 @@ func dripHandler(w http.ResponseWriter, r *http.Request) {
 			info = []byte(content.uri)
 			log.Print(err)
 		}
-		log.Printf("duration-seconds: %d %s", time.Now().Unix()-content.startTime, info)
+		log.Printf("duration-seconds:%d %s", time.Now().Unix()-content.startTime, info)
 		content.ticker.Stop()
 		return
 	} else if err != nil {
