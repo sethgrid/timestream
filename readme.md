@@ -8,7 +8,11 @@ Simply ```go run main.go```. You can then access ```localhost:9999/someurl```. I
 
 This gets more interesting if you pass a base64 encoded URI.
 
-```localhost:9999/dWlkOjE4MCBtc2dpZDoxMDA0IHJjcHQ6Zm9vQGV4YW1wbGUuY29t.gif``` will result in a log entry with the duration of the connection (in seconds) and the base64 decoded information in the URI. 
+```localhost:9999/dWlkOjE4MCBtc2dpZDoxMDA0IHJjcHQ6Zm9vQGV4YW1wbGUuY29t.gif``` will result in a log entry with the duration of the connection (in seconds) and the base64 decoded information in the URI. Here is the resulting sample log entry:
+    
+    2014/07/06 14:23:27 New Connection
+    2014/07/06 14:23:46 duration-seconds:19 uid:180 msgid:1004 rcpt:foo@example.com
+
 
 ### Proof of Concept in Action
 
